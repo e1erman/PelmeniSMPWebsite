@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Server-Besonderheiten – Pelmeni SMP Wiki</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/wiki.css" />
+  <style>
+    .cigarette-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+    }
+    .cigarette-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.75rem;
+      font-size: 0.8rem;
+    }
+    .cigarette-item .brand {
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+    }
+    .cigarette-item .ingredient {
+      color: var(--accent);
+      font-family: monospace;
+      font-size: 0.78rem;
+    }
+    .recipe-placeholder {
+      background: var(--bg-card);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../index.html" class="nav-logo">Pelmeni SMP</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Start</a></li>
+      <li><a href="#" onclick="openSupport();return false;">Unterstützen</a></li>
+      <li><a href="index.html" class="active">Wiki</a></li>
+    </ul>
+    <button class="nav-ip" onclick="copyIP()">pelmeni.cc</button>
+  </nav>
+
+  <div class="wiki-layout">
+
+    <aside class="wiki-sidebar">
+      <input class="sidebar-search" type="search" placeholder="Wiki durchsuchen…" />
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Ubersicht</div>
+        <ul class="sidebar-nav">
+          <li><a href="index.html"><span class="icon">🏠</span> Wiki-Startseite</a></li>
+          <li><a href="getting-started.html"><span class="icon">🚀</span> Erste Schritte</a></li>
+          <li><a href="rules.html"><span class="icon">📜</span> Regeln</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Spielmechaniken</div>
+        <ul class="sidebar-nav">
+          <li><a href="commands.html"><span class="icon">⌨️</span> Befehle</a></li>
+          <li><a href="economy.html"><span class="icon">💰</span> Wirtschaft</a></li>
+          <li><a href="land-claiming.html"><span class="icon">🏡</span> Grundstucke</a></li>
+          <li><a href="features.html" class="active"><span class="icon">✨</span> Besonderheiten</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Info</div>
+        <ul class="sidebar-nav">
+          <li><a href="faq.html"><span class="icon">❓</span> FAQ</a></li>
+          <li><a href="changelog.html"><span class="icon">📋</span> Changelog</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="wiki-main">
+      <div class="wiki-breadcrumb">
+        <a href="../index.html">Pelmeni SMP</a>
+        <span class="sep">/</span>
+        <a href="index.html">Wiki</a>
+        <span class="sep">/</span>
+        <span>Server-Besonderheiten</span>
+      </div>
+
+      <h1 class="wiki-page-title">Server-Besonderheiten</h1>
+      <p class="wiki-page-meta">Was den Pelmeni SMP besonders macht</p>
+
+      <div class="wiki-content">
+
+        <h2>🎣 Stasis Chambers</h2>
+        <p>
+          Um die Nutzung von Stasis Chambers zu erleichtern, können mehrere Angeln gleichzeitig ausgeworfen sein.
+          Sie verschwinden nicht, wenn du stirbst, den Server verlässt oder der Server neu startet.
+        </p>
+
+        <h2>🪦 Gräber</h2>
+        <p>
+          Wenn du stirbst, entsteht ein Grab mit allen Items und allen Leveln.
+          Das Grab verschwindet nicht, bis du alles herausgenommen hast.
+        </p>
+
+        <h2>🚃 Schnelle Minecarts</h2>
+        <p>
+          Minecarts können deutlich schneller werden als im normalen Spiel.
+        </p>
+
+        <h2>🎮 Java &amp; Bedrock</h2>
+        <p>
+          Du kannst mit <strong>Java</strong> (alle Versionen ab 1.9) und mit <strong>Bedrock</strong> joinen.
+        </p>
+
+        <h2>⚔️ PvP-Toggle</h2>
+        <p>
+          Mit <code>/pvptoggle</code> schaltest du deine PvP-Zustimmung an oder aus.
+          Der Status wird links neben deinem Namen angezeigt:
+        </p>
+        <ul>
+          <li>🟥 <strong>Rot</strong> = PvP an</li>
+          <li>🟩 <strong>Grün</strong> = PvP aus</li>
+        </ul>
+
+        <h2>🌌 Far Lands</h2>
+        <p>
+          Es gibt Far Lands wie in den alten Minecraft-Versionen.
+        </p>
+
+        <h2>🎙️ Simple Voice Chat</h2>
+        <p>
+          Der Server nutzt <strong>Simple Voice Chat</strong>.
+          Installiere die Mod bzw. das Plugin, um mit anderen Spielern in der Nähe zu sprechen.
+        </p>
+
+        <h2>🚬 Zigaretten</h2>
+        <p>
+          Es gibt verschiedene Zigarettensorten mit unterschiedlichen Zutaten.
+          <strong>Effekte:</strong> Hunger und Leben werden komplett aufgefüllt. Dazu gibt es Haste, Speed, Jump Boost, Stärke und Resistenz.
+          <strong>Dauer:</strong> 30 Sekunden – nur Parliament hält 2 Minuten.
+        </p>
+
+        <div class="cigarette-grid">
+          <div class="cigarette-item">
+            <div class="brand">Marlboro Rot</div>
+            <div class="ingredient">Redstone</div>
+          </div>
+          <div class="cigarette-item">
+            <div class="brand">Marlboro Gold</div>
+            <div class="ingredient">Gold Nugget</div>
+          </div>
+          <div class="cigarette-item">
+            <div class="brand">Lucky Strike</div>
+            <div class="ingredient">Bambus</div>
+          </div>
+          <div class="cigarette-item">
+            <div class="brand">Newport</div>
+            <div class="ingredient">Schneeball</div>
+          </div>
+          <div class="cigarette-item">
+            <div class="brand">L&amp;M</div>
+            <div class="ingredient">Leaf Litter</div>
+          </div>
+          <div class="cigarette-item">
+            <div class="brand">Winston Black</div>
+            <div class="ingredient">Kohle</div>
+          </div>
+          <div class="cigarette-item">
+            <div class="brand">Parliament</div>
+            <div class="ingredient">Smaragd</div>
+          </div>
+        </div>
+
+        <h3>Rezept</h3>
+        <p>Das Rezept gilt für alle Sorten – nur die Zutat ändert sich:</p>
+        <div class="recipe-placeholder">
+          Rezept-Bild hier einfügen
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast">IP kopiert!</div>
+  <script>
+    function openSupport() {
+      const w = 520, h = 800;
+      const left = window.screenX + Math.round((window.outerWidth - w) / 2);
+      const top  = window.screenY + Math.round((window.outerHeight - h) / 2);
+      window.open('../support/index.html', 'support', `width=${w},height=${h},left=${left},top=${top},resizable=yes`);
+    }
+        function copyIP() {
+      navigator.clipboard.writeText('pelmeni.cc').then(() => {
+        const t = document.getElementById('toast');
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 2000);
+      });
+    }
+  </script>
+</body>
+</html>

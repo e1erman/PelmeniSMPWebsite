@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gräber – Pelmeni SMP Wiki</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/wiki.css" />
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="../index.html" class="nav-logo">Pelmeni SMP</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Start</a></li>
+      <li><a href="../index.html#features">Features</a></li>
+      <li><a href="#" onclick="openSupport();return false;">Unterstützen</a></li>
+      <li><a href="index.html" class="active">Wiki</a></li>
+    </ul>
+    <button class="nav-ip" onclick="copyIP()">pelmeni.cc</button>
+  </nav>
+
+  <div class="wiki-layout">
+    <aside class="wiki-sidebar">
+      <input class="sidebar-search" type="search" placeholder="Wiki durchsuchen…" />
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Ubersicht</div>
+        <ul class="sidebar-nav">
+          <li><a href="index.html"><span class="icon">🏠</span> Wiki-Startseite</a></li>
+          <li><a href="getting-started.html"><span class="icon">🚀</span> Erste Schritte</a></li>
+          <li><a href="rules.html"><span class="icon">📜</span> Regeln</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Spielmechaniken</div>
+        <ul class="sidebar-nav">
+          <li><a href="commands.html"><span class="icon">⌨️</span> Befehle</a></li>
+          <li><a href="stasis-chambers.html"><span class="icon">🎣</span> Stasis Chambers</a></li>
+          <li><a href="graves.html" class="active"><span class="icon">🪦</span> Gräber</a></li>
+          <li><a href="minecarts.html"><span class="icon">🚃</span> Minecarts</a></li>
+          <li><a href="java-bedrock.html"><span class="icon">🎮</span> Java &amp; Bedrock</a></li>
+          <li><a href="pvp-toggle.html"><span class="icon">⚔️</span> PvP-Toggle</a></li>
+          <li><a href="far-lands.html"><span class="icon">🌌</span> Far Lands</a></li>
+          <li><a href="voice-chat.html"><span class="icon">🎙️</span> Voice Chat</a></li>
+          <li><a href="cigarettes.html"><span class="icon">🚬</span> Zigaretten</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Info</div>
+        <ul class="sidebar-nav">
+          <li><a href="faq.html"><span class="icon">❓</span> FAQ</a></li>
+          <li><a href="changelog.html"><span class="icon">📋</span> Changelog</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="wiki-main">
+      <div class="wiki-breadcrumb">
+        <a href="../index.html">Pelmeni SMP</a><span class="sep">/</span>
+        <a href="index.html">Wiki</a><span class="sep">/</span>
+        <span>Gräber</span>
+      </div>
+      <h1 class="wiki-page-title">Gräber</h1>
+      <p class="wiki-page-meta">Deine Items sind beim Tod sicher</p>
+      <div class="wiki-content">
+        <p>
+          Wenn du stirbst, werden deine Items und Erfahrungspunkte nicht fallen gelassen –
+          stattdessen entsteht an deiner Todesposition ein <strong>Grab</strong>.
+        </p>
+
+        <h2>Wie funktioniert es?</h2>
+        <ul>
+          <li>Bei jedem Tod wird automatisch ein Grab erstellt.</li>
+          <li>Das Grab enthält <strong>alle deine Items</strong> und <strong>alle deine Level</strong>.</li>
+          <li>Das Grab verschwindet <strong>nicht</strong> – es bleibt so lange bestehen bis du alles herausgenommen hast.</li>
+          <li>Nur du kannst dein eigenes Grab öffnen.</li>
+        </ul>
+
+        <div class="callout callout-tip">
+          <span class="callout-icon">💡</span>
+          <p>Auch wenn du weit entfernt stirbst oder der Server neu startet – dein Grab wartet auf dich.</p>
+        </div>
+
+        <h2>Grab finden</h2>
+        <p>
+          Die Koordinaten deines Grabes werden dir beim Tod im Chat angezeigt.
+          Du kannst auch <code>/axgraves list</code> verwenden um eine Liste deiner Gräber zu sehen.
+        </p>
+
+        <h2>Plugin</h2>
+        <div class="modrinth-card" data-slug="axgraves"></div>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast">IP kopiert!</div>
+  <script src="../js/modrinth-card.js"></script>
+  <script>
+    function openSupport() {
+      const w = 520, h = 800;
+      const left = window.screenX + Math.round((window.outerWidth - w) / 2);
+      const top  = window.screenY + Math.round((window.outerHeight - h) / 2);
+      window.open('../support/index.html', 'support', `width=${w},height=${h},left=${left},top=${top},resizable=yes`);
+    }
+        function copyIP() {
+      navigator.clipboard.writeText('pelmeni.cc').then(() => {
+        const t = document.getElementById('toast');
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 2000);
+      });
+    }
+  </script>
+</body>
+</html>

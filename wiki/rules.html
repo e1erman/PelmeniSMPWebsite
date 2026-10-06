@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Regeln – Pelmeni SMP Wiki</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/wiki.css" />
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../index.html" class="nav-logo">Pelmeni SMP</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Start</a></li>
+      <li><a href="../index.html#features">Features</a></li>
+      <li><a href="#" onclick="openSupport();return false;">Unterstützen</a></li>
+      <li><a href="index.html" class="active">Wiki</a></li>
+    </ul>
+    <button class="nav-ip" onclick="copyIP()">pelmeni.cc</button>
+  </nav>
+
+  <div class="wiki-layout">
+
+    <aside class="wiki-sidebar">
+      <input class="sidebar-search" type="search" placeholder="Wiki durchsuchen…" />
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Ubersicht</div>
+        <ul class="sidebar-nav">
+          <li><a href="index.html"><span class="icon">🏠</span> Wiki-Startseite</a></li>
+          <li><a href="getting-started.html"><span class="icon">🚀</span> Erste Schritte</a></li>
+          <li><a href="rules.html" class="active"><span class="icon">📜</span> Regeln</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Spielmechaniken</div>
+        <ul class="sidebar-nav">
+          <li><a href="commands.html"><span class="icon">⌨️</span> Befehle</a></li>
+          <li><a href="stasis-chambers.html"><span class="icon">🎣</span> Stasis Chambers</a></li>
+          <li><a href="graves.html"><span class="icon">🪦</span> Gräber</a></li>
+          <li><a href="minecarts.html"><span class="icon">🚃</span> Minecarts</a></li>
+          <li><a href="java-bedrock.html"><span class="icon">🎮</span> Java &amp; Bedrock</a></li>
+          <li><a href="pvp-toggle.html"><span class="icon">⚔️</span> PvP-Toggle</a></li>
+          <li><a href="far-lands.html"><span class="icon">🌌</span> Far Lands</a></li>
+          <li><a href="voice-chat.html"><span class="icon">🎙️</span> Voice Chat</a></li>
+          <li><a href="cigarettes.html"><span class="icon">🚬</span> Zigaretten</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Info</div>
+        <ul class="sidebar-nav">
+          <li><a href="faq.html"><span class="icon">❓</span> FAQ</a></li>
+          <li><a href="changelog.html"><span class="icon">📋</span> Changelog</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="wiki-main">
+      <div class="wiki-breadcrumb">
+        <a href="../index.html">Pelmeni SMP</a>
+        <span class="sep">/</span>
+        <a href="index.html">Wiki</a>
+        <span class="sep">/</span>
+        <span>Regeln</span>
+      </div>
+
+      <h1 class="wiki-page-title">Serverregeln</h1>
+      <p class="wiki-page-meta">Bitte lesen bevor du spielst</p>
+
+      <div class="wiki-content">
+
+        <div class="callout callout-danger">
+          <span class="callout-icon">🚨</span>
+          <p>Regelverstösse können je nach Schwere zu einem temporären oder permanenten Bann führen. Bei Problemen oder Streitfällen wende dich an <strong>#Streitfall-Erstellen</strong> im Discord.</p>
+        </div>
+
+        <h2>1. Unbegründetes Töten</h2>
+        <p>
+          Das grundlose Töten anderer Spieler ist nicht gestattet. Eine Ausnahme besteht, wenn der betreffende
+          Spieler <strong>PvP aktiviert</strong> hat. Wenn jemand mit deaktiviertem PvP gekillt wird, bekommt er
+          sein Zeug zurück. Falls das nicht freiwillig geschieht, folgt ein <strong>Bann von mindestens einem Tag</strong>.
+          Außerdem ist das Ausloggen mitten im Kampf nicht gestattet.
+        </p>
+
+        <h2>2. Respektvoller Umgang</h2>
+        <p>
+          In Minecraft und den Discord-Kanälen ist ein respektvoller Umgang miteinander verpflichtend.
+          Schwere und ernst gemeinte Beleidigungen werden nicht toleriert.
+        </p>
+
+        <h2>3. Cheating und unerlaubte Hilfsmittel</h2>
+        <p>
+          Cheaten jeglicher Art ist strengstens untersagt. Wird die Nutzung eines verbotenen Ressourcepacks
+          oder eines Cheat-Clients festgestellt, erfolgt ein <strong>sofortiger Bann von mindestens drei Tagen</strong>.
+          Bei Feststellung von XRAY kann es zum <strong>Löschen des Inventars</strong> kommen.
+        </p>
+
+        <h2>4. Reports &amp; Beweise</h2>
+        <p>
+          Für jeden Report benötigen wir einen eindeutigen Beweis. Dazu zählen:
+        </p>
+        <ul>
+          <li>Video-Aufnahmen</li>
+          <li>Screenshots</li>
+          <li>Clips</li>
+          <li>Logs</li>
+        </ul>
+        <p>
+          Reports ohne Beweis können leider nicht bearbeitet werden und es kann keine Maßregelung erfolgen.
+          Wir wollen faire Entscheidungen treffen und keine Spieler ohne Beweise bestrafen.
+        </p>
+
+        <div class="callout callout-tip">
+          <span class="callout-icon">💡</span>
+          <p>Danke für euer Verständnis. Bei Problemen, Regelverstössen oder Streitigkeiten: <strong>#Streitfall-Erstellen</strong> im <a href="/dc">Discord</a>.</p>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast">IP kopiert!</div>
+  <script>
+    function openSupport() {
+      const w = 520, h = 800;
+      const left = window.screenX + Math.round((window.outerWidth - w) / 2);
+      const top  = window.screenY + Math.round((window.outerHeight - h) / 2);
+      window.open('../support/index.html', 'support', `width=${w},height=${h},left=${left},top=${top},resizable=yes`);
+    }
+        function copyIP() {
+      navigator.clipboard.writeText('pelmeni.cc').then(() => {
+        const t = document.getElementById('toast');
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 2000);
+      });
+    }
+  </script>
+</body>
+</html>

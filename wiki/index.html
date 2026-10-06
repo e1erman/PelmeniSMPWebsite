@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wiki – Pelmeni SMP</title>
+  <meta name="description" content="Das offizielle Wiki des Pelmeni SMP. Regeln, Befehle, Plugins und mehr." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/wiki.css" />
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../index.html" class="nav-logo">Pelmeni SMP</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Start</a></li>
+      <li><a href="../index.html#features">Features</a></li>
+      <li><a href="#" onclick="openSupport();return false;">Unterstützen</a></li>
+      <li><a href="index.html" class="active">Wiki</a></li>
+    </ul>
+    <button class="nav-ip" onclick="copyIP()">pelmeni.cc</button>
+  </nav>
+
+  <div class="wiki-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="wiki-sidebar">
+      <input class="sidebar-search" type="search" placeholder="Wiki durchsuchen…" id="wiki-search" />
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Ubersicht</div>
+        <ul class="sidebar-nav">
+          <li><a href="index.html" class="active"><span class="icon">🏠</span> Wiki-Startseite</a></li>
+          <li><a href="getting-started.html"><span class="icon">🚀</span> Erste Schritte</a></li>
+          <li><a href="rules.html"><span class="icon">📜</span> Regeln</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Spielmechaniken</div>
+        <ul class="sidebar-nav">
+          <li><a href="commands.html"><span class="icon">⌨️</span> Befehle</a></li>
+          <li><a href="stasis-chambers.html"><span class="icon">🎣</span> Stasis Chambers</a></li>
+          <li><a href="graves.html"><span class="icon">🪦</span> Gräber</a></li>
+          <li><a href="minecarts.html"><span class="icon">🚃</span> Minecarts</a></li>
+          <li><a href="java-bedrock.html"><span class="icon">🎮</span> Java &amp; Bedrock</a></li>
+          <li><a href="pvp-toggle.html"><span class="icon">⚔️</span> PvP-Toggle</a></li>
+          <li><a href="far-lands.html"><span class="icon">🌌</span> Far Lands</a></li>
+          <li><a href="voice-chat.html"><span class="icon">🎙️</span> Voice Chat</a></li>
+          <li><a href="cigarettes.html"><span class="icon">🚬</span> Zigaretten</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Info</div>
+        <ul class="sidebar-nav">
+          <li><a href="faq.html"><span class="icon">❓</span> FAQ</a></li>
+          <li><a href="changelog.html"><span class="icon">📋</span> Changelog</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="wiki-main">
+      <div class="wiki-breadcrumb">
+        <a href="../index.html">Pelmeni SMP</a>
+        <span class="sep">/</span>
+        <span>Wiki</span>
+      </div>
+
+      <h1 class="wiki-page-title">Pelmeni SMP Wiki</h1>
+      <p class="wiki-page-meta">Offizielle Dokumentation des Servers</p>
+
+      <div class="wiki-content">
+        <p>
+          Willkommen im Wiki des <strong>Pelmeni SMP</strong>. Hier findest du alle wichtigen Informationen
+          uber den Server – von Regeln uber Befehle bis hin zu Plugins und Spielmechaniken.
+        </p>
+
+        <h2>Schnellstart</h2>
+
+        <div class="wiki-cards">
+          <a href="getting-started.html" class="wiki-card">
+            <div class="card-icon">🚀</div>
+            <h3>Erste Schritte</h3>
+            <p>Wie du dem Server beitrittst und loslegst.</p>
+          </a>
+          <a href="rules.html" class="wiki-card">
+            <div class="card-icon">📜</div>
+            <h3>Regeln</h3>
+            <p>Die Serverregeln – bitte vor dem Spielen lesen.</p>
+          </a>
+          <a href="commands.html" class="wiki-card">
+            <div class="card-icon">⌨️</div>
+            <h3>Befehle</h3>
+            <p>Alle verfugbaren Spielerbefehle im Uberblick.</p>
+          </a>
+          <a href="stasis-chambers.html" class="wiki-card">
+            <div class="card-icon">🎣</div>
+            <h3>Stasis Chambers</h3>
+            <p>Mehrere Angeln, überleben Tod &amp; Neustarts.</p>
+          </a>
+          <a href="graves.html" class="wiki-card">
+            <div class="card-icon">🪦</div>
+            <h3>Gräber</h3>
+            <p>Beim Tod entsteht ein Grab mit all deinen Items.</p>
+          </a>
+          <a href="pvp-toggle.html" class="wiki-card">
+            <div class="card-icon">⚔️</div>
+            <h3>PvP-Toggle</h3>
+            <p>PvP-Zustimmung selbst an- und ausschalten.</p>
+          </a>
+          <a href="cigarettes.html" class="wiki-card">
+            <div class="card-icon">🚬</div>
+            <h3>Zigaretten</h3>
+            <p>7 craftbare Sorten mit Hunger-, Leben- und Buff-Effekten.</p>
+          </a>
+          <a href="java-bedrock.html" class="wiki-card">
+            <div class="card-icon">🎮</div>
+            <h3>Java &amp; Bedrock</h3>
+            <p>Alle Versionen ab Java 1.9 und Bedrock.</p>
+          </a>
+          <a href="far-lands.html" class="wiki-card">
+            <div class="card-icon">🌌</div>
+            <h3>Far Lands</h3>
+            <p>Die legendären Far Lands aus alten Versionen.</p>
+          </a>
+          <a href="voice-chat.html" class="wiki-card">
+            <div class="card-icon">🎙️</div>
+            <h3>Voice Chat</h3>
+            <p>Proximity Voice Chat mit Simple Voice Chat.</p>
+          </a>
+          <a href="minecarts.html" class="wiki-card">
+            <div class="card-icon">🚃</div>
+            <h3>Schnelle Minecarts</h3>
+            <p>Deutlich höhere Maximalgeschwindigkeit als Vanilla.</p>
+          </a>
+          <a href="faq.html" class="wiki-card">
+            <div class="card-icon">❓</div>
+            <h3>FAQ</h3>
+            <p>Haufig gestellte Fragen.</p>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast">IP kopiert!</div>
+
+  <script>
+    function openSupport() {
+      const w = 520, h = 800;
+      const left = window.screenX + Math.round((window.outerWidth - w) / 2);
+      const top  = window.screenY + Math.round((window.outerHeight - h) / 2);
+      window.open('../support/index.html', 'support', `width=${w},height=${h},left=${left},top=${top},resizable=yes`);
+    }
+        function copyIP() {
+      navigator.clipboard.writeText('pelmeni.cc').then(() => {
+        const t = document.getElementById('toast');
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 2000);
+      });
+    }
+
+    // Simple search redirect
+    document.getElementById('wiki-search').addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        const q = e.target.value.trim().toLowerCase();
+        const map = {
+          'regeln': 'rules.html', 'rules': 'rules.html',
+          'befehle': 'commands.html', 'commands': 'commands.html',
+          'start': 'getting-started.html', 'erste': 'getting-started.html',
+          'land': 'land-claiming.html', 'claim': 'land-claiming.html',
+          'wirtschaft': 'economy.html', 'economy': 'economy.html',
+          'faq': 'faq.html',
+          'changelog': 'changelog.html',
+        };
+        for (const [key, page] of Object.entries(map)) {
+          if (q.includes(key)) { window.location.href = page; return; }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

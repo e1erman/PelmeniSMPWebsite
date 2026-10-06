@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wirtschaft – Pelmeni SMP Wiki</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/wiki.css" />
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="../index.html" class="nav-logo">Pelmeni SMP</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Start</a></li>
+      <li><a href="#" onclick="openSupport();return false;">Unterstützen</a></li>
+      <li><a href="index.html" class="active">Wiki</a></li>
+    </ul>
+    <button class="nav-ip" onclick="copyIP()">pelmeni.cc</button>
+  </nav>
+
+  <div class="wiki-layout">
+
+    <aside class="wiki-sidebar">
+      <input class="sidebar-search" type="search" placeholder="Wiki durchsuchen…" />
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Ubersicht</div>
+        <ul class="sidebar-nav">
+          <li><a href="index.html"><span class="icon">🏠</span> Wiki-Startseite</a></li>
+          <li><a href="getting-started.html"><span class="icon">🚀</span> Erste Schritte</a></li>
+          <li><a href="rules.html"><span class="icon">📜</span> Regeln</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Spielmechaniken</div>
+        <ul class="sidebar-nav">
+          <li><a href="commands.html"><span class="icon">⌨️</span> Befehle</a></li>
+          <li><a href="stasis-chambers.html"><span class="icon">🎣</span> Stasis Chambers</a></li>
+          <li><a href="graves.html"><span class="icon">🪦</span> Gräber</a></li>
+          <li><a href="minecarts.html"><span class="icon">🚃</span> Minecarts</a></li>
+          <li><a href="java-bedrock.html"><span class="icon">🎮</span> Java &amp; Bedrock</a></li>
+          <li><a href="pvp-toggle.html"><span class="icon">⚔️</span> PvP-Toggle</a></li>
+          <li><a href="far-lands.html"><span class="icon">🌌</span> Far Lands</a></li>
+          <li><a href="voice-chat.html"><span class="icon">🎙️</span> Voice Chat</a></li>
+          <li><a href="cigarettes.html"><span class="icon">🚬</span> Zigaretten</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Info</div>
+        <ul class="sidebar-nav">
+          <li><a href="faq.html"><span class="icon">❓</span> FAQ</a></li>
+          <li><a href="changelog.html"><span class="icon">📋</span> Changelog</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="wiki-main">
+      <div class="wiki-breadcrumb">
+        <a href="../index.html">Pelmeni SMP</a>
+        <span class="sep">/</span>
+        <a href="index.html">Wiki</a>
+        <span class="sep">/</span>
+        <span>Wirtschaft</span>
+      </div>
+
+      <h1 class="wiki-page-title">Wirtschaft</h1>
+      <p class="wiki-page-meta">Das Wirtschaftssystem des Pelmeni SMP</p>
+
+      <div class="wiki-content">
+
+        <p>
+          Auf dem Pelmeni SMP gibt es eine spielereigene Wirtschaft mit Wahrung,
+          Spielershops und einem Server-Shop.
+        </p>
+
+        <h2>Wahrung</h2>
+        <p>
+          Die Serverwahrung heißt <strong>Pelmeni (PLM)</strong>. Du startest mit einem
+          kleinen Startkapital und kannst durch verschiedene Aktivitaten mehr verdienen.
+        </p>
+
+        <h3>Geld verdienen</h3>
+        <ul>
+          <li>Items im Server-Shop verkaufen</li>
+          <li>Eigene Spielershops betreiben</li>
+          <li>Quests und Aufgaben erledigen</li>
+          <li>Handeln mit anderen Spielern</li>
+        </ul>
+
+        <h2>Server-Shop</h2>
+        <p>
+          Am Spawn gibt es einen Server-Shop wo du grundlegende Items kaufen und verkaufen kannst.
+          Gehe zum Spawn (<code>/spawn</code>) und suche das Shop-Gebaude.
+        </p>
+
+        <h2>Spielershops</h2>
+        <p>
+          Jeder Spieler kann eigene Shops auf seinem Grundstuck erstellen.
+          Ein Spielershop besteht aus einer <strong>Kiste mit einem Schild</strong> daruber.
+        </p>
+
+        <h3>Shop erstellen</h3>
+        <ol>
+          <li>Platziere eine Kiste</li>
+          <li>Halte ein Schild in der Hand und klicke auf die Kiste</li>
+          <li>Folge dem Format:<br>
+            <pre><code>[Zeile 1] Anzahl der Items
+[Zeile 2] Kaufpreis (leer = nicht kaufbar)
+[Zeile 3] Verkaufspreis (leer = nicht verkaufbar)
+[Zeile 4] Item-Name</code></pre>
+          </li>
+          <li>Lege die Items in die Kiste</li>
+        </ol>
+
+        <h2>Geld-Befehle</h2>
+        <table class="cmd-table">
+          <thead><tr><th>Befehl</th><th>Beschreibung</th></tr></thead>
+          <tbody>
+            <tr><td>/bal</td><td>Eigenes Guthaben anzeigen</td></tr>
+            <tr><td>/baltop</td><td>Reichste Spieler anzeigen</td></tr>
+            <tr><td>/pay &lt;Spieler&gt; &lt;Betrag&gt;</td><td>Geld uberweisen</td></tr>
+          </tbody>
+        </table>
+
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast">IP kopiert!</div>
+  <script>
+    function openSupport() {
+      const w = 520, h = 800;
+      const left = window.screenX + Math.round((window.outerWidth - w) / 2);
+      const top  = window.screenY + Math.round((window.outerHeight - h) / 2);
+      window.open('../support/index.html', 'support', `width=${w},height=${h},left=${left},top=${top},resizable=yes`);
+    }
+        function copyIP() {
+      navigator.clipboard.writeText('pelmeni.cc').then(() => {
+        const t = document.getElementById('toast');
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 2000);
+      });
+    }
+  </script>
+</body>
+</html>

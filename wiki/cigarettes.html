@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zigaretten – Pelmeni SMP Wiki</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/wiki.css" />
+  <style>
+    .cig-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+      gap: 0.6rem;
+      margin-bottom: 1.25rem;
+    }
+    .cig-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.75rem;
+    }
+    .cig-card .brand { font-weight: 600; color: var(--text); font-size: 0.85rem; margin-bottom: 0.2rem; }
+    .cig-card .ingredient { color: var(--accent); font-family: monospace; font-size: 0.78rem; }
+    .cig-card .duration { color: var(--text-muted); font-size: 0.72rem; margin-top: 0.2rem; }
+    .recipe-placeholder {
+      background: var(--bg-card);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="../index.html" class="nav-logo">Pelmeni SMP</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Start</a></li>
+      <li><a href="../index.html#features">Features</a></li>
+      <li><a href="#" onclick="openSupport();return false;">Unterstützen</a></li>
+      <li><a href="index.html" class="active">Wiki</a></li>
+    </ul>
+    <button class="nav-ip" onclick="copyIP()">pelmeni.cc</button>
+  </nav>
+
+  <div class="wiki-layout">
+    <aside class="wiki-sidebar">
+      <input class="sidebar-search" type="search" placeholder="Wiki durchsuchen…" />
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Ubersicht</div>
+        <ul class="sidebar-nav">
+          <li><a href="index.html"><span class="icon">🏠</span> Wiki-Startseite</a></li>
+          <li><a href="getting-started.html"><span class="icon">🚀</span> Erste Schritte</a></li>
+          <li><a href="rules.html"><span class="icon">📜</span> Regeln</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Spielmechaniken</div>
+        <ul class="sidebar-nav">
+          <li><a href="commands.html"><span class="icon">⌨️</span> Befehle</a></li>
+          <li><a href="stasis-chambers.html"><span class="icon">🎣</span> Stasis Chambers</a></li>
+          <li><a href="graves.html"><span class="icon">🪦</span> Gräber</a></li>
+          <li><a href="minecarts.html"><span class="icon">🚃</span> Minecarts</a></li>
+          <li><a href="java-bedrock.html"><span class="icon">🎮</span> Java &amp; Bedrock</a></li>
+          <li><a href="pvp-toggle.html"><span class="icon">⚔️</span> PvP-Toggle</a></li>
+          <li><a href="far-lands.html"><span class="icon">🌌</span> Far Lands</a></li>
+          <li><a href="voice-chat.html"><span class="icon">🎙️</span> Voice Chat</a></li>
+          <li><a href="cigarettes.html" class="active"><span class="icon">🚬</span> Zigaretten</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Info</div>
+        <ul class="sidebar-nav">
+          <li><a href="faq.html"><span class="icon">❓</span> FAQ</a></li>
+          <li><a href="changelog.html"><span class="icon">📋</span> Changelog</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="wiki-main">
+      <div class="wiki-breadcrumb">
+        <a href="../index.html">Pelmeni SMP</a><span class="sep">/</span>
+        <a href="index.html">Wiki</a><span class="sep">/</span>
+        <span>Zigaretten</span>
+      </div>
+      <h1 class="wiki-page-title">Zigaretten</h1>
+      <p class="wiki-page-meta">7 craftbare Sorten mit Buff-Effekten</p>
+      <div class="wiki-content">
+
+        <h2>Verwendung</h2>
+        <p>
+          Halte eine Zigarette in der Hand und <strong>Rechtsklick</strong> um sie in den Mund zu nehmen.
+          Zünde sie anschließend mit einem <strong>Feuerstein &amp; Stahl</strong> an – dann werden
+          die Effekte aktiviert. Spieler in deiner Nähe erhalten ebenfalls die Potion-Effekte.
+        </p>
+
+        <h2>Effekte</h2>
+        <p>Alle Zigarettensorten füllen beim Rauchen <strong>Hunger und Leben komplett auf</strong> und geben folgende Buffs:</p>
+        <ul>
+          <li>Haste</li>
+          <li>Speed</li>
+          <li>Jump Boost</li>
+          <li>Stärke</li>
+          <li>Resistenz</li>
+        </ul>
+        <p><strong>Dauer:</strong> 30 Sekunden – nur Parliament hält 2 Minuten.</p>
+
+        <h2>Sorten &amp; Zutaten</h2>
+        <div class="cig-grid">
+          <div class="cig-card">
+            <div class="brand">Marlboro Rot</div>
+            <div class="ingredient">Redstone</div>
+            <div class="duration">30 Sek.</div>
+          </div>
+          <div class="cig-card">
+            <div class="brand">Marlboro Gold</div>
+            <div class="ingredient">Gold Nugget</div>
+            <div class="duration">30 Sek.</div>
+          </div>
+          <div class="cig-card">
+            <div class="brand">Lucky Strike</div>
+            <div class="ingredient">Bambus</div>
+            <div class="duration">30 Sek.</div>
+          </div>
+          <div class="cig-card">
+            <div class="brand">Newport</div>
+            <div class="ingredient">Schneeball</div>
+            <div class="duration">30 Sek.</div>
+          </div>
+          <div class="cig-card">
+            <div class="brand">L&amp;M</div>
+            <div class="ingredient">Leaf Litter</div>
+            <div class="duration">30 Sek.</div>
+          </div>
+          <div class="cig-card">
+            <div class="brand">Winston Black</div>
+            <div class="ingredient">Kohle</div>
+            <div class="duration">30 Sek.</div>
+          </div>
+          <div class="cig-card">
+            <div class="brand">Parliament</div>
+            <div class="ingredient">Smaragd</div>
+            <div class="duration">2 Min.</div>
+          </div>
+        </div>
+
+        <h2>Rezept</h2>
+        <p>Das Rezept gilt für alle Sorten – nur die Zutat in der Mitte ändert sich:</p>
+        <div class="recipe-placeholder">Rezept-Bild hier einfügen</div>
+
+        <h2>Plugin</h2>
+        <div class="modrinth-card" data-slug="cigarette"></div>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast">IP kopiert!</div>
+  <script src="../js/modrinth-card.js"></script>
+  <script>
+    function openSupport() {
+      const w = 520, h = 800;
+      const left = window.screenX + Math.round((window.outerWidth - w) / 2);
+      const top  = window.screenY + Math.round((window.outerHeight - h) / 2);
+      window.open('../support/index.html', 'support', `width=${w},height=${h},left=${left},top=${top},resizable=yes`);
+    }
+        function copyIP() {
+      navigator.clipboard.writeText('pelmeni.cc').then(() => {
+        const t = document.getElementById('toast');
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 2000);
+      });
+    }
+  </script>
+</body>
+</html>

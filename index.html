@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pelmeni SMP</title>
+  <meta name="description" content="Willkommen auf dem Pelmeni SMP – einem gemeinschaftlichen Minecraft Survival-Server. Tritt jetzt bei: pelmeni.cc" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="index.html" class="nav-logo">Pelmeni SMP</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Start</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#" onclick="openSupport();return false;">Unterstützen</a></li>
+      <li><a href="wiki/index.html">Wiki</a></li>
+    </ul>
+    <button class="nav-ip" onclick="copyIP()">pelmeni.cc</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <span class="hero-tag">Chapter 1 Season 1 &mdash; 1.26.2</span>
+    <h1>Willkommen auf dem<br><span>Pelmeni SMP</span></h1>
+    <p class="hero-sub">
+      Java &amp; Bedrock, Far Lands, Voice Chat, PvP-Toggle und mehr – Survival so wie es sein soll.
+    </p>
+    <div class="hero-actions">
+      <button class="btn btn-primary" onclick="copyIP()">Server beitreten</button>
+      <a href="wiki/index.html" class="btn btn-secondary">Wiki lesen</a>
+    </div>
+
+    <div class="status-card" id="status-card">
+      <div class="status-item">
+        <div class="status-dot" id="status-dot"></div>
+        <span id="status-text">Wird geladen…</span>
+      </div>
+      <div class="status-item" id="players-item" style="display:none">
+        <strong id="players-online">—</strong>
+        <span>Spieler online</span>
+      </div>
+      <div class="status-item">
+        <span>IP:</span>
+        <strong>pelmeni.cc</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="container">
+      <p class="section-label">Was uns ausmacht</p>
+      <h2 class="section-title">Server-Besonderheiten</h2>
+      <p class="section-sub">Mehr als normales Vanilla – aber ohne den Charme zu verlieren.</p>
+
+      <div class="features-grid">
+        <a href="wiki/java-bedrock.html" class="feature-card">
+          <div class="feature-icon">🎮</div>
+          <h3>Java &amp; Bedrock</h3>
+          <p>Alle Versionen ab Java 1.9 und Bedrock werden unterstützt.</p>
+        </a>
+        <a href="wiki/pvp-toggle.html" class="feature-card">
+          <div class="feature-icon">⚔️</div>
+          <h3>PvP-Toggle</h3>
+          <p>Mit <code>/pvptoggle</code> aktivierst oder deaktivierst du PvP. Dein Status wird neben deinem Namen angezeigt.</p>
+        </a>
+        <a href="wiki/graves.html" class="feature-card">
+          <div class="feature-icon">🪦</div>
+          <h3>Gräber</h3>
+          <p>Beim Tod entsteht ein Grab mit all deinen Items und Leveln – es bleibt, bis du alles geholt hast.</p>
+        </a>
+        <a href="wiki/stasis-chambers.html" class="feature-card">
+          <div class="feature-icon">🎣</div>
+          <h3>Stasis Chambers</h3>
+          <p>Mehrere Angeln gleichzeitig ausgeworfen, überleben Tod und Server-Neustarts.</p>
+        </a>
+        <a href="wiki/minecarts.html" class="feature-card">
+          <div class="feature-icon">🚃</div>
+          <h3>Schnelle Minecarts</h3>
+          <p>Minecarts können deutlich schneller werden als im normalen Spiel.</p>
+        </a>
+        <a href="wiki/far-lands.html" class="feature-card">
+          <div class="feature-icon">🌌</div>
+          <h3>Far Lands</h3>
+          <p>Die Far Lands aus alten Minecraft-Versionen existieren auf dem Server.</p>
+        </a>
+        <a href="wiki/voice-chat.html" class="feature-card">
+          <div class="feature-icon">🎙️</div>
+          <h3>Simple Voice Chat</h3>
+          <p>Sprich mit Spielern in deiner Nähe über Proximity Voice Chat.</p>
+        </a>
+        <a href="wiki/cigarettes.html" class="feature-card">
+          <div class="feature-icon">🚬</div>
+          <h3>Zigaretten</h3>
+          <p>7 craftbare Sorten – füllen Leben &amp; Hunger auf und geben Buffs wie Haste, Speed und Stärke.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIP -->
+  <section id="tip">
+    <div class="container">
+      <p class="section-label">Unterstützen</p>
+      <h2 class="section-title">Server unterstützen</h2>
+      <p class="section-sub">Hilf die Server-Kosten zu decken – jeder Betrag hilft.</p>
+      <button class="btn btn-primary" onclick="openSupport()">Unterstützen</button>
+    </div>
+  </section>
+
+  <!-- JOIN -->
+  <section>
+    <div class="container">
+      <div class="ip-banner">
+        <h2>Bereit zum Beitreten?</h2>
+        <div class="ip-display">
+          <span>pelmeni.cc</span>
+          <button class="copy-btn" onclick="copyIP()">Kopieren</button>
+        </div>
+        <p class="ip-sub">Java ab 1.9 · Bedrock · Chapter 1 Season 1</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Pelmeni SMP &mdash; <a href="wiki/index.html">Wiki</a> &mdash; <a href="/dc">Discord</a></p>
+  </footer>
+
+  <div class="toast" id="toast">IP kopiert!</div>
+
+  <script>
+    // Copy IP
+    function copyIP() {
+      navigator.clipboard.writeText('pelmeni.cc').then(() => {
+        const t = document.getElementById('toast');
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 2000);
+      });
+    }
+
+    // Server status via mcsrvstat.us
+    async function fetchStatus() {
+      const dot = document.getElementById('status-dot');
+      const text = document.getElementById('status-text');
+      const playersItem = document.getElementById('players-item');
+      const playersOnline = document.getElementById('players-online');
+
+      try {
+        const res = await fetch('https://api.mcsrvstat.us/3/pelmeni.cc');
+        const data = await res.json();
+
+        if (data.online) {
+          dot.classList.add('online');
+          text.textContent = 'Server online';
+          if (data.players) {
+            playersItem.style.display = 'flex';
+            playersOnline.textContent = `${data.players.online} / ${data.players.max}`;
+          }
+        } else {
+          dot.classList.add('offline');
+          text.textContent = 'Server offline';
+        }
+      } catch {
+        text.textContent = 'Status unbekannt';
+      }
+    }
+
+    fetchStatus();
+
+    function openSupport() {
+      const w = 520, h = 800;
+      const left = window.screenX + Math.round((window.outerWidth - w) / 2);
+      const top  = window.screenY + Math.round((window.outerHeight - h) / 2);
+      window.open('support/index.html', 'support', `width=${w},height=${h},left=${left},top=${top},resizable=yes`);
+    }
+  </script>
+</body>
+</html>
