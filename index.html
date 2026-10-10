@@ -15,8 +15,7 @@
       <li><a href="index.html" class="active">Start</a></li>
       <li><a href="#features">Features</a></li>
       <li><a href="#" onclick="openSupport();return false;">Unterstützen</a></li>
-      <li><a href="#" onclick="openVIP();return false;">VIP</a></li>
-      <li><a href="wiki/index.html">Wiki</a></li>
+<li><a href="wiki/index.html">Wiki</a></li>
     </ul>
     <button class="nav-ip" onclick="copyIP()">pelmeni.cc</button>
   </nav>
@@ -131,6 +130,7 @@
 
   <div class="toast" id="toast">IP kopiert!</div>
 
+
   <script>
     // Copy IP
     function copyIP() {
@@ -170,14 +170,7 @@
 
     fetchStatus();
 
-    function openVIP() {
-      const w = 520, h = 800;
-      const left = window.screenX + Math.round((window.outerWidth - w) / 2);
-      const top  = window.screenY + Math.round((window.outerHeight - h) / 2);
-      window.open('https://ko-fi.com/pelmeni_smp/tiers', 'vip', `width=${w},height=${h},left=${left},top=${top},resizable=yes`);
-    }
-
-    function openSupport() {
+function openSupport() {
       const w = 520, h = 800;
       const left = window.screenX + Math.round((window.outerWidth - w) / 2);
       const top  = window.screenY + Math.round((window.outerHeight - h) / 2);
